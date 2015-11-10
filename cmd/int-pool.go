@@ -7,7 +7,7 @@ import (
 
 func main() {
 
-     p := pool.NewPool()
+     p := pool.NewLIFOPool()
 
      f := pool.PoolInt{Int:int64(123)}
 
