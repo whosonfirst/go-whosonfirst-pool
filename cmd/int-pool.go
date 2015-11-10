@@ -5,17 +5,14 @@ import (
        pool "github.com/whosonfirst/go-whosonfirst-pool"
 )
 
-type Foo struct {
-     Value int64
-}
-
 func main() {
 
      p := pool.NewPool()
 
-     f := Foo{123}
+     f := pool.PoolInt{Int:int64(123)}
 
      p.Push(f)
+     v, _ := p.Pop()
 
-     fmt.Printf("%v", p.Pop())
+     fmt.Printf("%d", v.IntValue())
 }
