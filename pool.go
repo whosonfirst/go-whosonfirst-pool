@@ -52,7 +52,7 @@ func NewLIFOPool() *LIFOPool {
 
 	return &LIFOPool{
 		mutex: mu,
-		nodes: node,
+		nodes: nodes,
 		count: 0,
 	}
 }
