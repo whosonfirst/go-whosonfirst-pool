@@ -47,7 +47,7 @@ type LIFOPool struct {
 
 func NewLIFOPool() *LIFOPool {
 
-	mu := make(sync.Mutex)
+	mu := new(sync.Mutex)
 	nodes := make([]PoolItem, 0)
 
 	return &LIFOPool{
